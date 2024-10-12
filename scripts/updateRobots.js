@@ -1,7 +1,7 @@
 import fs from 'fs'
 import dotenv from 'dotenv'
 
-dotenv.config()
+dotenv.config({path: process.env.ENV_FILE ? process.env.ENV_FILE : '.env'})
 
 let robotsTxt = ''
 

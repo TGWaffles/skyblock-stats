@@ -3,7 +3,7 @@ import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 import dotenv from 'dotenv'
 
-dotenv.config()
+dotenv.config({path: process.env.ENV_FILE ? process.env.ENV_FILE : '.env'})
 
 
 /** @type {import('@sveltejs/kit').Config} */
