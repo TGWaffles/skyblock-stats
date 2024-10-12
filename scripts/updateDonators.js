@@ -1,7 +1,7 @@
 import fs from 'fs'
 import https from 'https'
 
-const API_URL = 'https://skyblock-api.matdoes.dev/'
+const API_URL = 'https://statsapi.tem.cx/'
 
 function fetch(url) {
 	return new Promise((resolve, reject) => {
