@@ -60,14 +60,14 @@
 	</section>
 	<section>
 		<h2>Info</h2>
-		<p>Website made by <a href="https://matdoes.dev">mat</a>.</p>
+		<p>Website originally made by <a href="https://matdoes.dev">mat</a> & revived by <a href="https://youtube.com/@_thomas">Thomas</a>.</p>
 		<p>
 			Official hangout/support Discord:
-			<a href="//discord.gg/KtscNUnh4f">discord.gg/KtscNUnh4f</a>.
+			<a href="//discord.gg/bUE3r3Jckc">discord.gg/bUE3r3Jckc</a>.
 		</p>
 		<p>
 			Source code:
-			<a href="//github.com/skyblockstats/skyblock-stats">github.com/skyblockstats/skyblock-stats</a
+			<a href="//github.com/tgwaffles/skyblock-stats">github.com/tgwaffles/skyblock-stats</a
 			>.
 		</p>
 		<p>
