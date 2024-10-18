@@ -14,6 +14,9 @@ export const handleFetch = (async ({ request, fetch, event }) => {
 		if (SKYBLOCK_STATS_API_KEY) {
 			request.headers.set('key', SKYBLOCK_STATS_API_KEY)
 		}
+		if (event.getClientAddress() != null) {
+			request.headers.set('client-address', event.getClientAddress())
+		}
 	}
 
 	return fetch(request)

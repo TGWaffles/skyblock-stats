@@ -8,6 +8,7 @@ RUN npm install
 COPY --chown=node:node . .
 RUN yarn
 RUN yarn run init
+ENV ADDRESS_HEADER=CF-Connecting-IP
 RUN npm run build
 
 FROM node:lts-alpine3.20
