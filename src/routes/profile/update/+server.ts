@@ -1,7 +1,6 @@
 import { fetchApi } from '$lib/api'
 import type { AccountSchema, SessionSchema } from '$lib/APITypes'
 import backgroundFileNames from '../../../_backgrounds.json'
-import donators from '../../../_donators.json'
 import admins from '../../../_admins.json'
 import env from '$lib/env'
 import type { PageServerLoad } from '../$types'
@@ -42,7 +41,6 @@ export const PATCH = (async ({ request, locals, platform }) => {
 	const blurBackground = data.blurBackground
 	const emoji = data.emoji
 
-	const isDonator = donators.find(d => d.uuid === sessionResponse.account?.minecraftUuid) !== undefined
 	const isAdmin = admins.includes(sessionResponse.account?.minecraftUuid)
 
 	if (typeof backgroundName !== 'undefined' && typeof backgroundName !== 'string') {
@@ -64,7 +62,7 @@ export const PATCH = (async ({ request, locals, platform }) => {
 	const backgroundUrl = backgroundName ? `/backgrounds/${backgroundName}` : undefined
 
 	if (emoji) {
-		if (!isDonator && !isAdmin)
+		if (!isAdmin)
 			throw error(401, 'You are not allowed to use emojis.')
 		if (!isValidEmoji(emoji))
 			throw error(400, 'Invalid emoji.')

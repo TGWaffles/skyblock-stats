@@ -1,9 +1,6 @@
 <script lang="ts">
-	import Username from '$lib/minecraft/Username.svelte'
 	import SearchUser from '$lib/SearchUser.svelte'
-	import donators from '../_donators.json'
 	import Head from '$lib/Head.svelte'
-	import Emoji from '$lib/Emoji.svelte'
 	import LoginButton from '$lib/LoginButton.svelte'
 	import type { PageData } from './$types'
 
@@ -46,18 +43,6 @@
 		</ul>
 	</section>
 
-	<section id="donators">
-		<h2>Donators</h2>
-		<p>
-			Thank you to these people for
-			<a href="https://ko-fi.com/matdoesdev" target="_blank">donating</a>. <Emoji value="❤" />
-		</p>
-		<ul>
-			{#each donators as donator}
-				<li><Username player={donator} headType="2d" hyperlinkToProfile /></li>
-			{/each}
-		</ul>
-	</section>
 	<section>
 		<h2>Info</h2>
 		<p>Website originally made by <a href="https://matdoes.dev">mat</a> & revived by <a href="https://youtube.com/@_thomas">Thomas</a>.</p>
@@ -96,10 +81,6 @@
 	.title-section {
 		margin: 0 auto;
 		width: fit-content;
-	}
-
-	#donators p {
-		margin: 0;
 	}
 
 	li {
